@@ -161,7 +161,7 @@
                             </div>
                         </div>
                     </div>
-                    <img class="lg:w-3/5 md:w-1/2 object-cover object-center rounded-lg md:mt-0 mt-12" alt="step" src="ashkan-forouzani-IRDPRsdozLI-unsplash.jpg" width="200">
+                    <img class="lg:w-3/5 md:w-1/2 object-cover object-center rounded-lg md:mt-0 mt-12" alt="step" src="ashkan-forouzani-IRDPRsdozLI-unsplash.jpg" width="100%" style="max-height: 600px;">
                 </div>
             </div>
         </section>
@@ -176,16 +176,16 @@
                 <div class="lg:w-1/2 md:w-2/3 mx-auto">
                     <div class="flex flex-wrap -m-2">
                         <div class="p-2 w-1/2">
-                            <input class="w-full bg-gray-800 rounded border border-gray-700 text-white focus:outline-none focus:border-orange-500 text-base px-4 py-2" placeholder="Name" type="text">
+                            <input id="form-name" class="w-full bg-gray-800 rounded border border-gray-700 text-white focus:outline-none focus:border-orange-500 text-base px-4 py-2" placeholder="Name" type="text">
                         </div>
                         <div class="p-2 w-1/2">
-                            <input class="w-full bg-gray-800 rounded border border-gray-700 text-white focus:outline-none focus:border-orange-500 text-base px-4 py-2" placeholder="Email" type="email">
+                            <input id="form-contact" class="w-full bg-gray-800 rounded border border-gray-700 text-white focus:outline-none focus:border-orange-500 text-base px-4 py-2" placeholder="Contact" type="text">
                         </div>
                         <div class="p-2 w-full">
                             <textarea class="w-full bg-gray-800 rounded border border-gray-700 text-white focus:outline-none h-48 focus:border-orange-500 text-base px-4 py-2 resize-none block" placeholder="Message"></textarea>
                         </div>
                         <div class="p-2 w-full">
-                            <button class="flex mx-auto text-white bg-orange-500 border-0 py-2 px-8 focus:outline-none hover:bg-orange-600 rounded text-lg">Send</button>
+                            <button type="button" class="flex mx-auto text-white bg-orange-500 border-0 py-2 px-8 focus:outline-none hover:bg-orange-600 rounded text-lg" onclick="pasteForm">Send</button>
                         </div>
                         <div class="p-2 w-full pt-8 mt-8 border-t border-gray-800 text-center">
                             <a class="text-orange-500">jacksolomedia@hotmail.co.uk</a>
@@ -227,4 +227,5 @@
         </footer>
         <!--THIS IS THE footer END-->
     </body>
+    <iframe id="gform" src="https://docs.google.com/forms/d/e/1FAIpQLSfIJ4NA7yxCRaebqRxqotMbyVEnzvEVPvEWEPIrc4DEknqrQg/viewform?embedded=true" style="position:absolute;z-index:0;" width="640" height="403" frameborder="0" marginheight="0" marginwidth="0">Caricamento…</iframe>
 </html>
