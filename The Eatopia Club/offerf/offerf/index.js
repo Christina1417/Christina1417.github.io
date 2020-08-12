@@ -15,8 +15,18 @@ var pasteForm = function(){
 	formBody.set('more', more.value);
 	console.log(singleLine);
 	fetch(scriptURL, { method: 'POST', body: formBody})
-		  .then(response => console.log('Success!', response))
+		  .then(response => {
+		  	console.log('Success!', response);
+		  	return response;
+		  })
+		  .then(res => {
+		  	name.value = '';
+		  	contact.value = '';
+		  	more.value = '';
+		  	document.getElementById('notification').style.maxHeight = '200px';
+		  })
 		  .catch(error => console.error('Error!', error.message));
+  
 };
 
 var pasteHeroForm = function(){
@@ -30,7 +40,15 @@ var pasteHeroForm = function(){
 	formBody.set('contact', contact.value);
 	formBody.set('more', "FROM HERO SECTION");
 	fetch(scriptURL, { method: 'POST', body: formBody})
-		  .then(response => console.log('Success!', response))
+		  .then(response => {
+		  	console.log('Success!', response);
+			return response;
+		  })
+		  .then(res => {
+			name.value = '';
+		  	contact.value = '';
+		  	document.getElementById('hero-notification').style.maxHeight = '200px';
+		  })
 		  .catch(error => console.error('Error!', error.message));
 };
 
